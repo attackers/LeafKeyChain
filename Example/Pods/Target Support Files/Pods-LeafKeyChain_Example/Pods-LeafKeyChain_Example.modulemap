@@ -1,0 +1,6 @@
+framework module Pods_LeafKeyChain_Example {
+  umbrella header "Pods-LeafKeyChain_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

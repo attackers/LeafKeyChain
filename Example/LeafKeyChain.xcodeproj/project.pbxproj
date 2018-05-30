@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		355B33A0739BA4C41E032A7E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		355B33A0739BA4C41E032A7E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		55FD20D8BAE04ADDF0D568F9 /* Pods-LeafKeyChain_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeafKeyChain_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeafKeyChain_Tests/Pods-LeafKeyChain_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* LeafKeyChain_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeafKeyChain_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,8 +63,8 @@
 		7A194D3DBF052A8D0C38E98E /* Pods-LeafKeyChain_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeafKeyChain_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeafKeyChain_Example/Pods-LeafKeyChain_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB76C81BF85E345E10D95F57 /* Pods_LeafKeyChain_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeafKeyChain_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4FF8D66BD7BA4BE28D606C0 /* LeafKeyChain.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LeafKeyChain.podspec; path = ../LeafKeyChain.podspec; sourceTree = "<group>"; };
-		B768CAD997398785748CA36E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B4FF8D66BD7BA4BE28D606C0 /* LeafKeyChain.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LeafKeyChain.podspec; path = ../LeafKeyChain.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B768CAD997398785748CA36E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CAEEA0FD4BDD2416ECA7270B /* Pods-LeafKeyChain_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeafKeyChain_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeafKeyChain_Example/Pods-LeafKeyChain_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FC324A56EC60ECBEB5B44ED9 /* Pods_LeafKeyChain_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeafKeyChain_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
