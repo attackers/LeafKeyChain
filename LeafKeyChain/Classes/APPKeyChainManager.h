@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface APPKeyChainManager : NSObject
+
 /**
  增加、查找通用字典参数
  
@@ -72,7 +73,7 @@
  @param UUID 存储UUID
  @return 返回是否添加成功
  */
-+ (BOOL)addIdentity:(NSString*)identity pwd:(NSString*)UUID;
++ (BOOL)addIdentity:(NSString*)identity UUID:(NSString*)UUID;
 
 /**
  查找当前service下的指定identity信息

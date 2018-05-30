@@ -7,7 +7,7 @@
 //
 
 #import "APPKeyChainManager.h"
-#define keyChainService @"ProjectSub1"
+#define keyChainService @"mifengShop"
 
 @implementation APPKeyChainManager
 - (instancetype)init
@@ -30,22 +30,22 @@
     
     BOOL ok = [APPKeyChainManager isAccountForService:account];
     
-    if (!ok) {
+    if (ok) {
+        return [APPKeyChainManager updataAccount:account password:password];
+    } else {
+        NSMutableDictionary *query = [NSMutableDictionary dictionaryWithDictionary:[APPKeyChainManager dictionaryFormat]];
+        
+        
+        NSData *pwd = [password dataUsingEncoding:NSUTF8StringEncoding];
+        [query setObject:pwd forKey:(__bridge id)kSecValueData];
+        
+        [query setObject:account forKey:(__bridge id)kSecAttrAccount];
+        OSStatus status = SecItemAdd((__bridge CFDictionaryRef)query, NULL);
+        if (status == noErr) {
+            return YES;
+        }
         return NO;
     }
-    
-    NSMutableDictionary *query = [NSMutableDictionary dictionaryWithDictionary:[APPKeyChainManager dictionaryFormat]];
-    
-    
-    NSData *pwd = [password dataUsingEncoding:NSUTF8StringEncoding];
-    [query setObject:pwd forKey:(__bridge id)kSecValueData];
-    
-    [query setObject:account forKey:(__bridge id)kSecAttrAccount];
-    OSStatus status = SecItemAdd((__bridge CFDictionaryRef)query, NULL);
-    if (status == noErr) {
-        return YES;
-    }
-    return NO;
 }
 
 /**
@@ -155,7 +155,7 @@
 @param UUID 存储UUID
 @return 返回是否添加成功
 */
-+ (BOOL)addIdentity:(NSString*)identity pwd:(NSString*)UUID {
++ (BOOL)addIdentity:(NSString*)identity UUID:(NSString*)UUID {
     return  [APPKeyChainManager addAccount:identity pwd:UUID];
 }
 
