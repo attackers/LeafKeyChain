@@ -1,6 +1,0 @@
-framework module LeafKeyChain {
-  umbrella header "LeafKeyChain-umbrella.h"
-
-  export *
-  module * { export * }
-}
