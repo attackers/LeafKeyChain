@@ -130,6 +130,24 @@
 }
 
 /**
+ 查找当前service下的指定用户信息
+ 
+ @return 返回查询结果
+ */
++ (NSDictionary*)accountForService:(NSString*)account {
+    NSMutableDictionary *query = [NSMutableDictionary dictionaryWithDictionary:[APPKeyChainManager dictionaryFormat]];
+    [query setObject:account forKey:(__bridge id)kSecAttrAccount];
+    [query setObject:(__bridge id)kSecMatchLimitOne forKey:(__bridge id)kSecMatchLimit];
+    CFTypeRef reslut = NULL;
+    OSStatus status = SecItemCopyMatching((__bridge CFDictionaryRef)query, &reslut);
+    if (status == noErr) {
+        
+        return (__bridge NSDictionary*)reslut;
+    }
+    return nil;
+}
+
+/**
  增加、查找通用字典参数
  
  @return 返回通用字典
@@ -164,5 +182,6 @@
     [query setObject:(__bridge id)kCFBooleanTrue forKey:(__bridge id)kSecReturnRef];
     return query;
 }
+
 
 @end

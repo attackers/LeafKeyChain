@@ -57,4 +57,11 @@
  */
 + (NSArray*)allAccount;
 
+/**
+ 查找当前service下的指定用户信息
+ 
+ @return 返回查询结果
+ */
++ (NSDictionary*)accountForService:(NSString*)account;
+
 @end
