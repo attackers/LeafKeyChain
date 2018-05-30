@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LeafKeyChain_Example' do
+  pod 'LeafKeyChain', :path => '../'
+
+  target 'LeafKeyChain_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
