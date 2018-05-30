@@ -50,6 +50,7 @@
  */
 + (BOOL)addAccount:(NSString*)account pwd:(NSString*)password;
 
+
 /**
  查找当前service下的所有数据
  
@@ -64,4 +65,19 @@
  */
 + (NSDictionary*)accountForService:(NSString*)account;
 
+/**
+ 用于保存设备UUID
+ 
+ @param identity 用于做数据存储的识别
+ @param UUID 存储UUID
+ @return 返回是否添加成功
+ */
++ (BOOL)addIdentity:(NSString*)identity pwd:(NSString*)UUID;
+
+/**
+ 查找当前service下的指定identity信息
+ 
+ @return 返回查询结果
+ */
++ (NSDictionary*)identityForService:(NSString*)identity;
 @end

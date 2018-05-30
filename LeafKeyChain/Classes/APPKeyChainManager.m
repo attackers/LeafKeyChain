@@ -147,6 +147,28 @@
     return nil;
 }
 
+
+/**
+用于保存设备UUID
+
+@param identity 用于做数据存储的识别
+@param UUID 存储UUID
+@return 返回是否添加成功
+*/
++ (BOOL)addIdentity:(NSString*)identity pwd:(NSString*)UUID {
+    return  [APPKeyChainManager addAccount:identity pwd:UUID];
+}
+
+/**
+ 查找当前service下的指定identity信息
+ 
+ @return 返回查询结果
+ */
++ (NSDictionary*)identityForService:(NSString*)identity {
+    return  [APPKeyChainManager accountForService:identity];
+}
+
+
 /**
  增加、查找通用字典参数
  
